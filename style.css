@@ -1,0 +1,489 @@
+﻿/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕГО САЙТА */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0b0b; /* Глубокий премиальный черный фон */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ШАПКА САЙТА (HEADER) */
+header {
+    background-color: #111111;
+    border-bottom: 2px solid #d4af37; /* Золотая полоса */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 22px;
+    color: #d4af37;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    font-size: 11px;
+    color: #bbb;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #d4af37;
+}
+
+.header-phone a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #d4af37;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.header-phone a:hover {
+    background-color: #d4af37;
+    color: #111111;
+}
+
+/* ГЛАВНАЯ СТРАНИЦА: БАННЕР (HERO) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), #1f242d; 
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    color: #cccccc;
+}
+
+/* КНОПКИ */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #d4af37;
+    color: #111111;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+/* ГЛАВНАЯ СТРАНИЦА: ПРЕИМУЩЕСТВА */
+.features {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 15px auto 0 auto;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature-card {
+    background: #161616;
+    padding: 40px 30px;
+    border-radius: 6px;
+    flex: 1;
+    border: 1px solid #222222;
+    border-top: 3px solid #d4af37; /* Золотой акцент сверху */
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.feature-card p {
+    color: #999999;
+    font-size: 15px;
+}
+
+/* ГЛАВНАЯ СТРАНИЦА: ФОРМА ЗАЯВКИ */
+.callback-section {
+    background-color: #111111;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.callback-container h2 {
+    color: #d4af37;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.callback-container p {
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.callback-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.callback-form input {
+    padding: 14px;
+    width: 280px;
+    border: 1px solid #333333;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.callback-form input:focus {
+    border-color: #d4af37;
+    outline: none;
+}
+
+/* ==========================================================================
+   ОБНОВЛЕННЫЕ ДИЗАЙНЕРСКИЕ СТИЛИ СТРАНИЦЫ КАТАЛОГА
+   ========================================================================== */
+.catalog-download {
+    background: linear-gradient(135deg, #141414 0%, #1f1f1f 100%);
+    border-bottom: 2px solid #d4af37;
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: inset 0 -10px 20px rgba(0,0,0,0.5);
+}
+
+.catalog-download h2 {
+    color: #d4af37;
+    font-size: 28px;
+    font-family: 'Lora', serif;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.catalog-download p {
+    color: #bbbbbb;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn-download {
+    display: inline-block;
+    background: linear-gradient(180deg, #d4af37 0%, #aa843d 100%);
+    color: #000000;
+    padding: 15px 35px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-download:hover {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.7);
+    transform: translateY(-2px);
+}
+
+.catalog-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.catalog-container h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 32px;
+    font-family: 'Lora', serif;
+    position: relative;
+}
+
+/* Сетка карточек */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+/* Элегантная карточка товара под полированный камень */
+.product-card {
+    background: linear-gradient(180deg, #141414 0%, #0d0d0d 100%);
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    padding: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Эффект дороговизны при наведении */
+.product-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+}
+
+.product-badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #d4af37;
+    color: #000000;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.product-img-container {
+    background: #1a1a1a;
+    height: 240px; /* Высота подложки для памятника */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #222;
+    padding: 10px; /* Добавляем внутренний отступ, чтобы картинка не прижималась к краям */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Имитация красивой гравировки/иконки памятника */
+.monument-icon {
+    font-size: 60px;
+    color: #444;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.product-card:hover .monument-icon {
+    color: #d4af37; /* Иконка загорается золотом при наведении */
+}
+
+.img-tip {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-card h3 {
+    color: #ffffff;
+    font-size: 19px;
+    font-family: 'Lora', serif;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 10px;
+}
+
+.product-desc {
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Удобный блок цен */
+.product-price-box {
+    background: #111111;
+    padding: 15px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #222;
+    border-left: 3px solid #d4af37;
+}
+
+.product-price-box div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #aaaaaa;
+}
+
+.product-price-box div:last-child {
+    margin-bottom: 0;
+}
+
+.product-price-box span {
+    font-weight: 500;
+}
+
+.product-price-box strong {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* Золотая цена для контраста */
+.product-price-box .price-gold {
+    color: #d4af37;
+    font-size: 16px;
+}
+
+/* Стильная кнопка заказа */
+.btn-order {
+    display: block;
+    text-align: center;
+    background: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-order:hover {
+    background: #d4af37;
+    color: #000000;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+/* Красивая замена картинок на силуэты памятников */
+.monument-stone-shape {
+    background: #111111;
+    width: 90px;
+    height: 140px;
+    border-radius: 15px 15px 0 0; /* Делаем верх закругленным, как стела */
+    border: 2px solid #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+}
+
+.product-card:hover .monument-stone-shape {
+    border-color: #d4af37; /* Стела загорается золотом при наведении */
+    transform: scale(1.05);
+}
+
+.stone-engraving {
+    font-size: 36px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
+}
+/* Правильные стили, чтобы картинка полностью влезала по размеру */
+.product-img {
+    width: 100%;
+    height: 100%; /* Занимает всю доступную высоту контейнера */
+    max-height: 220px; /* Ограничиваем максимальную высоту, чтобы не ломать карточку */
+    object-fit: contain; /* Самое важное: картинка сжимается и влезает ПОЛНОСТЬЮ без обрезки */
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.6)); /* Красивая тень под памятником */
+    transition: transform 0.3s ease;
+}
+
+/* Эффект аккуратного увеличения при наведении */
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
